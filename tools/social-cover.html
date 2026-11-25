@@ -20,6 +20,8 @@
     figcaption { display: flex; align-items: center; height: 30px; margin-bottom: 8px; font-size: 23px; font-weight: 600; }
     figcaption span { margin-left: 8px; font-size: 18px; font-weight: 400; }
     img { display: block; width: 352px; height: 352px; object-fit: contain; outline: 1px solid #c7d7cf; }
+    .image-panel { position: relative; width: 352px; height: 352px; }
+    .cat-box { position: absolute; left: 38.28125%; top: 36.328125%; width: 48.4375%; height: 60.15625%; border: 3px solid #df3333; pointer-events: none; }
     .ours figcaption { color: #075e50; }
     .ours img { outline: 3px solid #075e50; }
     footer { display: flex; justify-content: space-between; align-items: center; margin-top: 19px; font-size: 18px; line-height: 24px; }
@@ -27,6 +29,7 @@
     .prompt-label { color: #52665f; margin-right: 8px; }
     .prompt strong { color: #075e50; }
     .context { color: #52665f; }
+    .annotation-note { color: #a22b2b; font-size: 16px; }
   </style>
 </head>
 <body>
@@ -41,22 +44,32 @@
         <small>Training-free · Inversion-free</small>
       </div>
     </header>
-    <section class="comparison" aria-label="Round-to-square cake editing comparison">
+    <section class="comparison" aria-label="Goat-to-horse editing comparison with the neighboring cat highlighted">
       <figure>
         <figcaption>Source</figcaption>
-        <img src="../docs/assets/images/examples/cake/source.png" alt="Source image: a round cake on a wooden plate" width="352" height="352">
+        <div class="image-panel">
+          <img src="../docs/assets/social/goat-cat/source.jpg" alt="Source image: a goat and a cat on rocks by the sea" width="352" height="352">
+          <span class="cat-box" aria-hidden="true"></span>
+        </div>
       </figure>
       <figure>
         <figcaption>FlowEdit</figcaption>
-        <img src="../docs/assets/images/examples/cake/flowedit-flux.png" alt="FlowEdit output using FLUX.1-dev" width="352" height="352">
+        <div class="image-panel">
+          <img src="../docs/assets/social/goat-cat/flowedit-flux.png" alt="FlowEdit replaces the goat with a horse and also changes the neighboring cat, using FLUX.1-dev" width="352" height="352">
+          <span class="cat-box" aria-hidden="true"></span>
+        </div>
       </figure>
       <figure class="ours">
         <figcaption>DecFlowEdit <span>(ours)</span></figcaption>
-        <img src="../docs/assets/images/examples/cake/decflowedit-flux.png" alt="DecFlowEdit output using FLUX.1-dev" width="352" height="352">
+        <div class="image-panel">
+          <img src="../docs/assets/social/goat-cat/decflowedit-flux.png" alt="DecFlowEdit replaces the goat with a horse while better preserving the neighboring cat, using FLUX.1-dev" width="352" height="352">
+          <span class="cat-box" aria-hidden="true"></span>
+        </div>
       </figure>
     </section>
     <footer>
-      <p class="prompt"><span class="prompt-label">Target prompt</span>A <strong>square</strong> cake on a wooden plate</p>
+      <p class="prompt"><span class="prompt-label">Edit</span>Replace the <strong>goat</strong> with a <strong>horse</strong></p>
+      <p class="annotation-note">Red boxes: preserve the cat</p>
       <p class="context">PIE-Bench · FLUX.1-dev</p>
     </footer>
   </main>

@@ -24,7 +24,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
     if (layout.width !== 1200 || layout.height !== 630 || layout.bounds.some(r => r.x < 0 || r.y < 0 || r.right > 1200 || r.bottom > 630)) {
       throw new Error('Cover content exceeds canvas: ' + JSON.stringify(layout));
     }
-    const output = path.resolve(__dirname, '../docs/assets/images/social-cover-v1.png');
+    const output = path.resolve(__dirname, '../docs/assets/images/social-cover-v2.png');
     await page.screenshot({ path: output, type: 'png' });
     console.log(JSON.stringify({ output, width: 1200, height: 630, bytes: fs.statSync(output).size, layout }));
   } finally {
