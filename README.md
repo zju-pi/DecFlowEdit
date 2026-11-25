@@ -5,7 +5,7 @@
 ¹ Zhejiang University · ² University at Buffalo · ³ University of California, Berkeley<br>
 † Corresponding author
 
-[Paper](https://arxiv.org/abs/2609.34237) · [Code](https://github.com/ZheyuanZhan/DecFlowedit) · [Project page source](docs/)
+[Paper](https://arxiv.org/abs/2609.34237) · [Code](https://github.com/zju-pi/DecFlowEdit-Official) · [Project page source](docs/)
 
 DecFlowEdit uses velocity differences without classifier-free guidance (CFG) to identify where to edit, then uses the resulting spatial prior to constrain editing under default CFG. The method is training-free and inversion-free, and requires neither external spatial masks nor attention manipulation.
 
@@ -25,7 +25,7 @@ The short option changes the prior-extraction schedule only. The final editing s
 ## Contents
 
 ```text
-DecFlowedit/
+DecFlowEdit-Official/
   README.md
   LICENSE
   NOTICE
@@ -62,8 +62,8 @@ Soft priors are saved as 8-bit grayscale PNGs and read back with values scaled b
 Clone the repository, use an isolated Python environment, then install the dependencies:
 
 ```bash
-git clone https://github.com/ZheyuanZhan/DecFlowedit.git
-cd DecFlowedit
+git clone https://github.com/zju-pi/DecFlowEdit-Official.git
+cd DecFlowEdit-Official
 python -m pip install -r requirements.txt
 ```
 
@@ -118,7 +118,7 @@ python -m http.server 8000 --bind 127.0.0.1 --directory docs
 
 Open `http://127.0.0.1:8000` in a browser on the same machine. When working on a remote server, forward port 8000 through your SSH client or editor.
 
-To publish, configure GitHub Pages to deploy from the `main` branch and `/docs` folder. After Pages is enabled, the expected project URL is `https://zheyuanzhan.github.io/DecFlowedit/`. Website content and result figures are stored alongside the code for versioned updates.
+To publish, configure GitHub Pages to deploy from the `main` branch and `/docs` folder. After Pages is enabled, the expected project URL is `https://zju-pi.github.io/DecFlowEdit-Official/`. Website content and result figures are stored alongside the code for versioned updates.
 
 The page also works by opening `docs/index.html` directly. Main maintenance files:
 
