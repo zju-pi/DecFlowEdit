@@ -147,4 +147,4 @@ DecFlowEdit additions are licensed under the [Apache License 2.0](LICENSE). Flow
 
 ## Acknowledgments
 
-The paired-state sampling routines build on [FlowEdit](https://github.com/fallenshock/FlowEdit). Pretrained weights and the complete benchmark dataset are not included. The website shows selected examples used in the paper, with its layout inspired by the FlowEdit project page.
+The paired-state sampling routines build on [FlowEdit](https://github.com/fallenshock/FlowEdit). Pretrained weights and the complete benchmark dataset are not included. The website shows selected examples used in the paper.

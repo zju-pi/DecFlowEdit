@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="DecFlowEdit separates spatial localization from semantic editing across guidance configurations for self-localized, training-free image editing.">
-  <meta name="theme-color" content="#0d6efd">
+  <meta name="theme-color" content="#075e50">
   <meta name="citation_title" content="DecFlowEdit: Self-Localized Flow-based Image Editing via Guidance Decoupling">
   <meta name="citation_author" content="Zheyuan Zhan">
   <meta name="citation_author" content="Can Wang">
@@ -18,8 +18,8 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <title>DecFlowEdit — Self-Localized Flow-based Image Editing</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=2">
   <script src="assets/examples.js" defer></script>
   <script src="script.js" defer></script>
 </head>
@@ -41,28 +41,37 @@
 
   <main id="main">
     <section class="container paper-header" aria-labelledby="paper-title">
-      <h1 id="paper-title"><span>DecFlowEdit: Self-Localized Flow-based</span><br class="title-break"> Image Editing via Guidance Decoupling</h1>
+      <div class="title-group">
+        <h1 id="paper-title"><span class="project-name">DecFlowEdit:</span> <span class="paper-subtitle">Self-Localized Flow-based Image Editing via Guidance Decoupling</span></h1>
+        <div class="resource-links">
+          <a class="button button-primary" href="https://arxiv.org/abs/2609.34237">Paper</a>
+          <a class="button button-outline" href="https://github.com/zju-pi/DecFlowEdit-Official">Code</a>
+          <a class="button button-quiet" href="#bibtex">BibTeX</a>
+        </div>
+      </div>
+      <div class="paper-summary">
+        <p class="tagline"><span>Localize without CFG.</span> <span>Edit with default CFG.</span></p>
+        <p class="lead">Training-free, inversion-free image editing with better preservation of non-edited content.</p>
+      </div>
+      <div class="author-block">
       <div class="authors" aria-label="Authors">
         <div class="author-row"><span>Zheyuan Zhan<sup>1</sup></span><span>Can Wang<sup>1</sup></span><span>Jiawei Chen<sup>1</sup></span><span>Chun Chen<sup>1</sup></span><span>Siwei Lyu<sup>2</sup></span></div>
         <div class="author-row"><span>Zeyu Zheng<sup>3</sup></span><span>Defang Chen<sup>3†</sup></span></div>
       </div>
       <div class="affiliations"><span><sup>1</sup>Zhejiang University</span><span><sup>2</sup>University at Buffalo</span><span><sup>3</sup>University of California, Berkeley</span></div>
       <p class="correspondence">† Corresponding author</p>
-      <div class="resource-links">
-        <a class="button button-outline" href="https://arxiv.org/abs/2609.34237">Paper</a>
-        <a class="button button-outline" href="https://github.com/zju-pi/DecFlowEdit-Official">Code</a>
-        <a class="button button-outline" href="#bibtex">BibTeX</a>
       </div>
-      <p class="tagline">Localize without CFG. Edit with default CFG.</p>
-      <p class="lead">Training-free, inversion-free image editing with better preservation of non-edited content.</p>
     </section>
 
     <section class="container teaser" aria-label="Featured editing examples">
+      <div class="teaser-toolbar">
+      <p class="gallery-label">Featured edits</p>
       <div class="example-picker" id="hero-picker" role="group" aria-label="Choose a featured example">
         <button type="button" class="choice is-active" data-example="cake" aria-pressed="true">Shape change</button>
         <button type="button" class="choice" data-example="squirrel" aria-pressed="false">Object addition</button>
         <button type="button" class="choice" data-example="kitten" aria-pressed="false">Object removal</button>
         <button type="button" class="choice" data-example="new-york" aria-pressed="false">Background change</button>
+      </div>
       </div>
       <div class="image-grid teaser-grid" id="hero-grid">
         <figure><figcaption>Source</figcaption><button type="button" class="image-button" data-full="assets/images/examples/cake/source.png" aria-label="Enlarge source image"><img src="assets/images/examples/cake/source.png" alt="Source: a round cake on a wooden plate" width="512" height="512" fetchpriority="high"></button></figure>
@@ -155,7 +164,7 @@
     </section>
   </main>
 
-  <footer class="container footer"><p>DecFlowEdit builds on <a href="https://matankleiner.github.io/flowedit/">FlowEdit</a>. Website layout inspired by the FlowEdit project page.</p><p><a href="https://arxiv.org/abs/2609.34237">Paper</a><span aria-hidden="true"> · </span><a href="https://github.com/zju-pi/DecFlowEdit-Official">Code</a><span aria-hidden="true"> · </span><a href="#">Back to top</a></p></footer>
+  <footer class="container footer"><p>DecFlowEdit builds on <a href="https://matankleiner.github.io/flowedit/">FlowEdit</a>.</p><p><a href="https://arxiv.org/abs/2609.34237">Paper</a><span aria-hidden="true"> · </span><a href="https://github.com/zju-pi/DecFlowEdit-Official">Code</a><span aria-hidden="true"> · </span><a href="#">Back to top</a></p></footer>
 
   <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption"><div class="lightbox-toolbar"><p id="lightbox-caption"></p><button type="button" class="button" id="close-lightbox">Close</button></div><img id="lightbox-image" alt=""><p class="lightbox-hint">Press Escape or click outside the image to close.</p></dialog>
 </body>
