@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <title>DecFlowEdit social cover</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1200px; height: 630px; }
+    body { background: #f3f7f4; color: #172d29; font-family: Arial, Helvetica, sans-serif; }
+    .cover { width: 1200px; height: 630px; padding: 32px 40px 28px; border-top: 6px solid #075e50; }
+    header { display: flex; justify-content: space-between; align-items: center; height: 110px; margin-bottom: 20px; }
+    h1 { margin: 0 0 5px; color: #075e50; font-size: 66px; line-height: 1; letter-spacing: -2.8px; font-weight: 750; }
+    .subtitle { margin: 0; font-size: 23px; line-height: 1.3; letter-spacing: -.3px; }
+    .idea { border-left: 2px solid #a9c7bb; padding-left: 27px; width: 397px; }
+    .idea p { margin: 0; font-family: Georgia, serif; font-size: 27px; line-height: 1.25; }
+    .idea small { display: block; color: #52665f; margin-top: 9px; font-size: 15px; letter-spacing: .25px; }
+    .comparison { display: grid; grid-template-columns: repeat(3, 352px); gap: 32px; }
+    figure { margin: 0; }
+    figcaption { display: flex; align-items: center; height: 30px; margin-bottom: 8px; font-size: 23px; font-weight: 600; }
+    figcaption span { margin-left: 8px; font-size: 18px; font-weight: 400; }
+    img { display: block; width: 352px; height: 352px; object-fit: contain; outline: 1px solid #c7d7cf; }
+    .ours figcaption { color: #075e50; }
+    .ours img { outline: 3px solid #075e50; }
+    footer { display: flex; justify-content: space-between; align-items: center; margin-top: 19px; font-size: 18px; line-height: 24px; }
+    footer p { margin: 0; }
+    .prompt-label { color: #52665f; margin-right: 8px; }
+    .prompt strong { color: #075e50; }
+    .context { color: #52665f; }
+  </style>
+</head>
+<body>
+  <main class="cover">
+    <header>
+      <div>
+        <h1>DecFlowEdit</h1>
+        <p class="subtitle">Self-localized image editing via guidance decoupling</p>
+      </div>
+      <div class="idea">
+        <p>Localize without CFG.<br>Edit with default CFG.</p>
+        <small>Training-free · Inversion-free</small>
+      </div>
+    </header>
+    <section class="comparison" aria-label="Round-to-square cake editing comparison">
+      <figure>
+        <figcaption>Source</figcaption>
+        <img src="../docs/assets/images/examples/cake/source.png" alt="Source image: a round cake on a wooden plate" width="352" height="352">
+      </figure>
+      <figure>
+        <figcaption>FlowEdit</figcaption>
+        <img src="../docs/assets/images/examples/cake/flowedit-flux.png" alt="FlowEdit output using FLUX.1-dev" width="352" height="352">
+      </figure>
+      <figure class="ours">
+        <figcaption>DecFlowEdit <span>(ours)</span></figcaption>
+        <img src="../docs/assets/images/examples/cake/decflowedit-flux.png" alt="DecFlowEdit output using FLUX.1-dev" width="352" height="352">
+      </figure>
+    </section>
+    <footer>
+      <p class="prompt"><span class="prompt-label">Target prompt</span>A <strong>square</strong> cake on a wooden plate</p>
+      <p class="context">PIE-Bench · FLUX.1-dev</p>
+    </footer>
+  </main>
+</body>
+</html>
