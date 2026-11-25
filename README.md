@@ -5,7 +5,7 @@
 ¹ Zhejiang University · ² University at Buffalo · ³ University of California, Berkeley<br>
 † Corresponding author
 
-[Paper](https://arxiv.org/abs/2609.34237) · [Code](https://github.com/zju-pi/DecFlowEdit) · [Project page](https://zju-pi.github.io/DecFlowEdit-Official/)
+[Paper](https://arxiv.org/abs/2609.34237) · [Code](https://github.com/zju-pi/DecFlowEdit) · [Project page](https://zju-pi.github.io/DecFlowEdit/)
 
 DecFlowEdit uses velocity differences without classifier-free guidance (CFG) to identify where to edit, then uses the resulting spatial prior to constrain editing under default CFG. The method is training-free and inversion-free, and requires neither external spatial masks nor attention manipulation.
 
@@ -118,7 +118,7 @@ python -m http.server 8000 --bind 127.0.0.1 --directory docs
 
 Open `http://127.0.0.1:8000` in a browser on the same machine. When working on a remote server, forward port 8000 through your SSH client or editor.
 
-The live project page is [zju-pi.github.io/DecFlowEdit-Official](https://zju-pi.github.io/DecFlowEdit-Official/). Its existing GitHub Pages deployment uses the `main` branch and `/docs` folder of `zju-pi/DecFlowEdit-Official`; the code repository is `zju-pi/DecFlowEdit`. Website content and result figures are stored in `docs/` alongside the code for versioned updates.
+The project page address is [zju-pi.github.io/DecFlowEdit](https://zju-pi.github.io/DecFlowEdit/). To publish it, open **Settings → Pages** in `zju-pi/DecFlowEdit`, choose **Deploy from a branch**, select **main** and **/docs**, and save. Website content and result figures are stored in `docs/` alongside the code for versioned updates; subsequent changes to `docs/` are published from the same repository.
 
 The page also works by opening `docs/index.html` directly. Main maintenance files:
 
