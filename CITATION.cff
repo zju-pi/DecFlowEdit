@@ -19,7 +19,7 @@ authors:
   - family-names: Chen
     given-names: Defang
 url: "https://arxiv.org/abs/2609.34237"
-repository-code: "https://github.com/zju-pi/DecFlowEdit-Official"
+repository-code: "https://github.com/zju-pi/DecFlowEdit"
 preferred-citation:
   type: article
   title: "DecFlowEdit: Self-Localized Flow-based Image Editing via Guidance Decoupling"
