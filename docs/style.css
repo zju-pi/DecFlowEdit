@@ -59,6 +59,11 @@ h1 { font-weight: 650; letter-spacing: -.8px; line-height: 1.3; }
 .author-row { display: contents; }
 .authors span { white-space: nowrap; }
 .authors sup { font-size: 65%; padding-left: 2px; }
+.author-profile { text-decoration: underline; text-decoration-color: #9bbbab; text-underline-offset: 4px; }
+.author-profile:hover { text-decoration-color: currentColor; }
+.author-social { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; margin-left: 7px; border: 1px solid var(--border); border-radius: 5px; vertical-align: middle; color: var(--accent); }
+.author-social:hover { background: var(--tint); border-color: var(--accent); text-decoration: none; }
+.author-social svg { display: block; }
 .affiliations { display: flex; flex-wrap: wrap; gap: 3px 25px; margin-top: 9px; font-size: 15px; color: var(--muted); }
 .affiliations span { white-space: nowrap; }
 .affiliations sup { margin-right: 3px; }
